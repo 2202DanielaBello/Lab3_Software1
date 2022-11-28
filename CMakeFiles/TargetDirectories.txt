@@ -1,0 +1,3 @@
+/home/alse/Documents/PlatformIO/Projects/LAB3.2_GR2/Sofware1/CMakeFiles/labpp.bin.dir
+/home/alse/Documents/PlatformIO/Projects/LAB3.2_GR2/Sofware1/CMakeFiles/edit_cache.dir
+/home/alse/Documents/PlatformIO/Projects/LAB3.2_GR2/Sofware1/CMakeFiles/rebuild_cache.dir

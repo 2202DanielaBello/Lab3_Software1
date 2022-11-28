@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/labpp.bin.dir/src/config_tty.cpp.o CMakeFiles/labpp.bin.dir/src/main.cpp.o CMakeFiles/labpp.bin.dir/src/participant.cpp.o -o bin/labpp.bin 

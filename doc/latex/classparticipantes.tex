@@ -1,0 +1,184 @@
+\hypertarget{classparticipantes}{}\section{participantes Class Reference}
+\label{classparticipantes}\index{participantes@{participantes}}
+
+
+{\ttfamily \#include $<$lib\+\_\+grupo2.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classparticipantes_ac95bc17bd08e136d953af333d36a3930}{participantes} ()
+\item 
+\hyperlink{classparticipantes_ab5fb3ef09a7754876e365fef81a786d8}{participantes} (unsigned int participante\+\_\+id, string part\+\_\+name)
+\item 
+void \hyperlink{classparticipantes_a1b220cb322e21b17548d2a61b8df5125}{set\+\_\+participantes} ()
+\item 
+void \hyperlink{classparticipantes_aab4459455c32ff7c8ce75734fb3f335a}{set\+\_\+pushed} (unsigned int cant)
+\item 
+unsigned int \hyperlink{classparticipantes_a643de8965fc3b97be17befdc983be5b4}{get\+\_\+participante\+\_\+id} (unsigned int participante\+\_\+id)
+\item 
+string \hyperlink{classparticipantes_adb2548c80ef57db146570148a810d875}{get\+\_\+name} (string part\+\_\+name)
+\item 
+unsigned int \hyperlink{classparticipantes_ae38b0ef6e201f1310a810467aba88649}{get\+\_\+pushed} (unsigned int num\+\_\+pushed)
+\item 
+unsigned int \hyperlink{classparticipantes_a641f0127662b2b17e193d3b24b18a35e}{get\+\_\+\+Imprimir\+Info} (unsigned int \hyperlink{classparticipantes_a2177447cffbb9d2b2074dcc0e7d09f3f}{Imprimir\+Info})
+\item 
+void \hyperlink{classparticipantes_a2177447cffbb9d2b2074dcc0e7d09f3f}{Imprimir\+Info} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 11 of file lib\+\_\+grupo2.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticipantes_ac95bc17bd08e136d953af333d36a3930}\label{classparticipantes_ac95bc17bd08e136d953af333d36a3930}} 
+\index{participantes@{participantes}!participantes@{participantes}}
+\index{participantes@{participantes}!participantes@{participantes}}
+\subsubsection{\texorpdfstring{participantes()}{participantes()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily participantes\+::participantes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+declaracion de los constructores inicialcilzacion de las variables y funciones para la clase participantes 
+
+Definition at line 10 of file participant.\+cpp.
+
+
+\begin{DoxyCode}
+10 :participante\_id(0),part\_name(\textcolor{stringliteral}{" "}),num\_pushed(0)\{\}
+\end{DoxyCode}
+\mbox{\Hypertarget{classparticipantes_ab5fb3ef09a7754876e365fef81a786d8}\label{classparticipantes_ab5fb3ef09a7754876e365fef81a786d8}} 
+\index{participantes@{participantes}!participantes@{participantes}}
+\index{participantes@{participantes}!participantes@{participantes}}
+\subsubsection{\texorpdfstring{participantes()}{participantes()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily participantes\+::participantes (\begin{DoxyParamCaption}\item[{unsigned int}]{participante\+\_\+id,  }\item[{string}]{part\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Definition at line 11 of file participant.\+cpp.
+
+
+\begin{DoxyCode}
+11 :participante\_id(\textcolor{keywordtype}{id}),part\_name(name),num\_pushed(0)\{\}         
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticipantes_a641f0127662b2b17e193d3b24b18a35e}\label{classparticipantes_a641f0127662b2b17e193d3b24b18a35e}} 
+\index{participantes@{participantes}!get\+\_\+\+Imprimir\+Info@{get\+\_\+\+Imprimir\+Info}}
+\index{get\+\_\+\+Imprimir\+Info@{get\+\_\+\+Imprimir\+Info}!participantes@{participantes}}
+\subsubsection{\texorpdfstring{get\+\_\+\+Imprimir\+Info()}{get\_ImprimirInfo()}}
+{\footnotesize\ttfamily unsigned int participantes\+::get\+\_\+\+Imprimir\+Info (\begin{DoxyParamCaption}\item[{unsigned int}]{Imprimir\+Info }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classparticipantes_adb2548c80ef57db146570148a810d875}\label{classparticipantes_adb2548c80ef57db146570148a810d875}} 
+\index{participantes@{participantes}!get\+\_\+name@{get\+\_\+name}}
+\index{get\+\_\+name@{get\+\_\+name}!participantes@{participantes}}
+\subsubsection{\texorpdfstring{get\+\_\+name()}{get\_name()}}
+{\footnotesize\ttfamily string participantes\+::get\+\_\+name (\begin{DoxyParamCaption}\item[{string}]{part\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Definition at line 26 of file participant.\+cpp.
+
+
+\begin{DoxyCode}
+26                                                 \{
+27     \textcolor{keywordflow}{return} part\_name;
+28 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classparticipantes_a643de8965fc3b97be17befdc983be5b4}\label{classparticipantes_a643de8965fc3b97be17befdc983be5b4}} 
+\index{participantes@{participantes}!get\+\_\+participante\+\_\+id@{get\+\_\+participante\+\_\+id}}
+\index{get\+\_\+participante\+\_\+id@{get\+\_\+participante\+\_\+id}!participantes@{participantes}}
+\subsubsection{\texorpdfstring{get\+\_\+participante\+\_\+id()}{get\_participante\_id()}}
+{\footnotesize\ttfamily unsigned int participantes\+::get\+\_\+participante\+\_\+id (\begin{DoxyParamCaption}\item[{unsigned int}]{participante\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Definition at line 23 of file participant.\+cpp.
+
+
+\begin{DoxyCode}
+23                                                                               \{
+24     \textcolor{keywordflow}{return} participante\_id;
+25 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classparticipantes_ae38b0ef6e201f1310a810467aba88649}\label{classparticipantes_ae38b0ef6e201f1310a810467aba88649}} 
+\index{participantes@{participantes}!get\+\_\+pushed@{get\+\_\+pushed}}
+\index{get\+\_\+pushed@{get\+\_\+pushed}!participantes@{participantes}}
+\subsubsection{\texorpdfstring{get\+\_\+pushed()}{get\_pushed()}}
+{\footnotesize\ttfamily unsigned int participantes\+::get\+\_\+pushed (\begin{DoxyParamCaption}\item[{unsigned int}]{num\+\_\+pushed }\end{DoxyParamCaption})}
+
+
+
+Definition at line 30 of file participant.\+cpp.
+
+
+\begin{DoxyCode}
+30                                                                \{
+31     \textcolor{keywordflow}{return} num\_pushed;
+32 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classparticipantes_a2177447cffbb9d2b2074dcc0e7d09f3f}\label{classparticipantes_a2177447cffbb9d2b2074dcc0e7d09f3f}} 
+\index{participantes@{participantes}!Imprimir\+Info@{Imprimir\+Info}}
+\index{Imprimir\+Info@{Imprimir\+Info}!participantes@{participantes}}
+\subsubsection{\texorpdfstring{Imprimir\+Info()}{ImprimirInfo()}}
+{\footnotesize\ttfamily void participantes\+::\+Imprimir\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 35 of file participant.\+cpp.
+
+
+\begin{DoxyCode}
+36 \{
+37     cout <<\textcolor{stringliteral}{"-----------------------------------------"}<<\textcolor{charliteral}{'\(\backslash\)n'};
+38     cout <<\textcolor{stringliteral}{"El nombre del participante es: "}<<part\_name<<\textcolor{charliteral}{'\(\backslash\)n'};
+39     cout <<\textcolor{stringliteral}{"El ID participante es: "}<< participante\_id<<\textcolor{charliteral}{'\(\backslash\)n'};
+40     cout <<\textcolor{stringliteral}{"El # de pulsaciones que tuvo es: "}<<num\_pushed <<\textcolor{charliteral}{'\(\backslash\)n'}; 
+41     cout <<\textcolor{stringliteral}{"-----------------------------------------"}<<\textcolor{charliteral}{'\(\backslash\)n'};
+42 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classparticipantes_a1b220cb322e21b17548d2a61b8df5125}\label{classparticipantes_a1b220cb322e21b17548d2a61b8df5125}} 
+\index{participantes@{participantes}!set\+\_\+participantes@{set\+\_\+participantes}}
+\index{set\+\_\+participantes@{set\+\_\+participantes}!participantes@{participantes}}
+\subsubsection{\texorpdfstring{set\+\_\+participantes()}{set\_participantes()}}
+{\footnotesize\ttfamily void participantes\+::set\+\_\+participantes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 12 of file participant.\+cpp.
+
+
+\begin{DoxyCode}
+12                                       \{
+13     cout << \textcolor{stringliteral}{"ingrese el id del partcipantes"} << endl;
+14     cin >> participante\_id;
+15 
+16     cout << \textcolor{stringliteral}{"ingrese el nombre del participante:"}<< endl;
+17     cin  >> part\_name;
+18 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classparticipantes_aab4459455c32ff7c8ce75734fb3f335a}\label{classparticipantes_aab4459455c32ff7c8ce75734fb3f335a}} 
+\index{participantes@{participantes}!set\+\_\+pushed@{set\+\_\+pushed}}
+\index{set\+\_\+pushed@{set\+\_\+pushed}!participantes@{participantes}}
+\subsubsection{\texorpdfstring{set\+\_\+pushed()}{set\_pushed()}}
+{\footnotesize\ttfamily void participantes\+::set\+\_\+pushed (\begin{DoxyParamCaption}\item[{unsigned int}]{cant }\end{DoxyParamCaption})}
+
+
+
+Definition at line 19 of file participant.\+cpp.
+
+
+\begin{DoxyCode}
+19                                                 \{
+20     num\_pushed =cant;
+21 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{lib__grupo2_8h}{lib\+\_\+grupo2.\+h}\item 
+src/\hyperlink{participant_8cpp}{participant.\+cpp}\end{DoxyCompactItemize}

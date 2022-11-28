@@ -1,0 +1,86 @@
+\hypertarget{main_8cpp}{}\section{src/main.cpp File Reference}
+\label{main_8cpp}\index{src/main.\+cpp@{src/main.\+cpp}}
+{\ttfamily \#include \char`\"{}lib\+\_\+grupo2.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{main.\+cpp@{main.\+cpp}!main@{main}}
+\index{main@{main}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 3 of file main.\+cpp.
+
+
+\begin{DoxyCode}
+4 \{
+5     \textcolor{keywordtype}{int} tiempo\_preparacion;
+6     \textcolor{keywordtype}{int} tiempo\_lectura;
+7     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} read\_buf;
+8     \textcolor{keywordtype}{int} num\_bytes;
+9     \textcolor{keywordtype}{int} cont;
+10     \textcolor{keywordtype}{int} cont2;
+11     \textcolor{keyword}{struct }termios tty;
+12     \textcolor{keywordtype}{int} serial\_port;
+13     
+14     \textcolor{keywordtype}{int} num\_part;
+15 
+16 \textcolor{comment}{//esto permite conectar el arduino a este programa solo se configura la salida}
+17 \textcolor{comment}{//arduino y la velocidad de transmision de datos}
+18     cout << \textcolor{stringliteral}{"Ingrese la cantidad de participantes: "}<< endl;
+19     cin >>num\_part;
+20     \hyperlink{classparticipantes}{participantes} participante[num\_part];
+21     \textcolor{comment}{//write (serial\_port,"S",sizeof(char));}
+22     \textcolor{comment}{//sleep(10);}
+23 
+24 
+25 \textcolor{comment}{//funcion para que el tiempo de preparacion y tiempo de lectura este muerto mientras transcurre}
+26     \textcolor{keywordflow}{for} (cont=0; cont < num\_part; cont ++)
+27     \{ 
+28         \hyperlink{tty__lib2_8h_af4b26b32c3c509fa307419652482c659}{config\_tty} (\textcolor{stringliteral}{"/dev/ttyS0"},&tty,B9600,&serial\_port);
+29         
+30         participante[cont].\hyperlink{classparticipantes_a1b220cb322e21b17548d2a61b8df5125}{set\_participantes}();
+31         tiempo\_preparacion=stoi(argv[1]); \textcolor{comment}{//prende el amarillo}
+32         tiempo\_lectura=stoi(argv[2]);    \textcolor{comment}{//prende el verde}
+33 
+34         sleep(2);
+35         write (serial\_port,\textcolor{stringliteral}{"s"},\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));
+36         
+37         cout << \textcolor{stringliteral}{"¡PREPARATE!"}  <<endl ;
+38         sleep(tiempo\_preparacion);
+39         write (serial\_port,\textcolor{stringliteral}{"r"},\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));
+40         cout << \textcolor{stringliteral}{"¡EMPIEZA A PULSAR!"} <<endl;
+41         sleep(tiempo\_lectura);
+42     
+43         \textcolor{keywordflow}{if} (num\_bytes > 0) \{
+44             cout << num\_bytes << endl;
+45         \}
+46 
+47         write (serial\_port,\textcolor{stringliteral}{"S"},\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));
+48         num\_bytes = read(serial\_port,&read\_buf,\textcolor{keyword}{sizeof}(read\_buf));
+49         cout <<\textcolor{stringliteral}{"llego hasta aqui:"}<< read\_buf <<\textcolor{stringliteral}{"  en  "}<<argv[2]<<\textcolor{stringliteral}{" segundos"}<< endl;
+50         participante[cont].\hyperlink{classparticipantes_aab4459455c32ff7c8ce75734fb3f335a}{set\_pushed}((\textcolor{keywordtype}{char})read\_buf);
+51 
+52         \textcolor{comment}{//cout << "su puntaje Bytes: "<< read\_buf << endl;}
+53         \textcolor{comment}{//cout << "Su puntaje es: "<< num\_bytes << endl;}
+54         printf (\textcolor{stringliteral}{"\(\backslash\)n %d\(\backslash\)n "},(\textcolor{keywordtype}{char}) read\_buf);
+55         close (serial\_port);
+56   
+57 
+58     \}
+59     \textcolor{keywordflow}{for} (cont2 = 0; cont2 < num\_part; cont2 ++)
+60     \{
+61         \textcolor{comment}{//Impresion de los datos}
+62         participante[cont2].\hyperlink{classparticipantes_a2177447cffbb9d2b2074dcc0e7d09f3f}{ImprimirInfo}();
+63     \} 
+64     \textcolor{keywordflow}{return} 0;
+65 \}
+\end{DoxyCode}
